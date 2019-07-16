@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 24px;
     line-height: 38px;
     padding: 0;
@@ -16,7 +16,13 @@ div {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Catamaran', sans-serif;
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1 {
+    font-size: 1.6em;
+    line-height: 67px;
+    margin: 0;
 }
 
 div.sidebar {
@@ -31,8 +37,6 @@ div.sidebar {
 }
 
 div.sidebar h1 { 
-    font-size: 42px;
-    line-height: 67px;
     margin: 0;
 }
 
@@ -53,7 +57,7 @@ div.sidebar a:visited {
 }
 
 div.sidebar .active {
-    color: purple !important;
+    color: #225588 !important;
 }
 
 div.sidebar .content-link:hover {
@@ -61,7 +65,7 @@ div.sidebar .content-link:hover {
 }
 
 div.sidebar ul {
-font-family: 'Catamaran', sans-serif;
+font-family: 'DM Sans', sans-serif;
     font-size: 24px;
     line-height: 38px;
     text-decoration: none;
@@ -71,7 +75,8 @@ font-family: 'Catamaran', sans-serif;
 
 div.content {
     margin-left: 380px;
-    margin-top: 10px;
+    margin-top: 12px;
+    padding-top: 12px;
     max-width: 1200px;
 }
 
@@ -93,6 +98,7 @@ ul.tl:before {
 ul.tl li.ti {
     list-style: none;
     margin: 0;
+    padding: 0 12px 12px 0;
     min-height: 200px;
     position: relative;
 }
@@ -102,7 +108,7 @@ ul.tl li.ti div.ti-label {
     color: rgba(0, 0, 0, 0.6);
     left: -130px;
     font-size: 0.8em;
-    top: -4px;
+    top: 16px;
 }
 
 ul.tl li.ti:before {
@@ -114,17 +120,30 @@ ul.tl li.ti:before {
     height: 20px;
     width: 20px;
     margin-left: -60px;
-    top: -4px;
+    top: 14px;
 }
 
 ul.links {
     list-style: none;
     padding: 0;
+    margin-bottom: 12px;
+    font-size: 0.7em;
+    line-height: 1.2em;
 }
 
 ul.credits {
     list-style: none;
     padding: 0;
+    font-size: 0.7em;
+    line-height: 1.2em;
+    margin-bottom: 12px;
+}
+
+ul.tl li.ti p {
+    line-height: 1.3em;
+    font-size: 0.9em;
+    padding: 0;
+    margin: 0;
 }
 
 div.construction-banner {
@@ -185,12 +204,13 @@ div.construction-banner div {
 
     ul.tl li.ti:before {
         margin-left: -40px;
+        top: 11px;
     }
 
     ul.tl li.ti div.ti-label {
         writing-mode: vertical-lr;
         text-orientation: upright;
         left: -66px;
-        top: -36px;
+        top: -5px;
     }
 }
