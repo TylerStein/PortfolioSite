@@ -164,11 +164,13 @@ div.construction-banner div {
     transform: translateY(-50%);
 }
 
-@media screen and (max-width: 1248px) {
+@media screen and (max-width: 650px) {
     div.construction-banner {
         display: none;
     }
+}
 
+@media screen and (max-width: 1248px) {
     div.sidebar {
         display: none;
     }
