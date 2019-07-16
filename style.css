@@ -23,9 +23,8 @@ div.sidebar {
     padding: 24px;
     left: 0;
     top: 0;
-    width: 453px;
+    width: 240px;
     height: 100%;
-    box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.8);
     display: block;
     position: fixed;
     z-index: 1;
@@ -71,90 +70,70 @@ font-family: 'Catamaran', sans-serif;
 }
 
 div.content {
-    padding: 0 140px 230px 140px;
-    margin-left: 453px;
+    margin-left: 380px;
+    margin-top: 10px;
+    max-width: 1200px;
 }
 
-div.content h1 {
-    margin: 42px 0 24px 0;
-}
 
-div.content .footer {
-    padding: 42px;
-    margin: 0 auto;
-    cursor: pointer;
-}
-
-div.content-card {
-    width: 1186px;
-    min-height: 256px;
-    margin: 24px 0;
-    border-radius: 3px;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.8);
-    padding: 24px;
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-backdrop-filter: blur(50%);
-    background-position: center;
-
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: space-between;
-    align-content: center;
-    flex-flow: wrap;
-}
-
-div.content-card .title {
-    max-width: 50%;
-    min-width: 300px;
-    margin-bottom: 1em;
-}
-
-div.content-card .description {
-    margin-top: 1em;
-    max-width: 100%;
-}
-
-div.content-card .image {
-    max-width: 50%;
-    min-width: 300px;
-}
-
-div.content-card h1 {
-    margin: 0 0 12px 0;
+ul.tl {
+    display: inline-block;
     padding: 0;
-}
-
-div.content-card h2 {
-    margin: 0 0 12px 0;
-    padding: 0;
-}
-
-div.content-card ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 0;
-    font-size: 0.8em;
-    line-height: 1.4em;
-}
-
-div.content-card p {
     margin: 0;
-    padding: 0;
+}
+
+ul.tl:before {
+    position: absolute;
+    content: " ";
+    border: 1px solid black;
+    height: 100%;
+    margin-left: -40px;
+}
+
+ul.tl li.ti {
+    list-style: none;
+    margin: 0;
+    min-height: 200px;
+    position: relative;
+}
+
+ul.tl li.ti div.ti-label {
+    position: absolute;
+    color: rgba(0, 0, 0, 0.6);
+    left: -130px;
     font-size: 0.8em;
-    line-height: 1.4em;
+    top: -4px;
+}
+
+ul.tl li.ti:before {
+    position: absolute;
+    content: " ";
+    border: 10px solid #FFF;
+    border-radius: 500%;
+    background: #225588;
+    height: 20px;
+    width: 20px;
+    margin-left: -60px;
+    top: -4px;
+}
+
+ul.links {
+    list-style: none;
+    padding: 0;
+}
+
+ul.credits {
+    list-style: none;
+    padding: 0;
 }
 
 div.construction-banner {
     cursor: default;
     user-select: none;
-    position: sticky;
+    position: fixed;
     z-index: 1;
     top: 0;
-    left: 100vw;
-    margin-left: auto;
+    right:0;
     border-radius: 3px;
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.8);
     width: 400px;
@@ -166,14 +145,16 @@ div.construction-banner {
     transform: translateX(130px) translateY(30px) rotateZ(45deg);
     color: white;
     font-weight: bold;
-    background:
+       /* 
+        background:
         linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
         linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
         linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
         linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
         linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
         linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
+        */
+    background-color: #225588; /*#131313;*/
     background-size: 20px 20px;
 }
 
@@ -181,4 +162,33 @@ div.construction-banner div {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1248px) {
+    div.construction-banner {
+        display: none;
+    }
+
+    div.sidebar {
+        display: none;
+    }
+
+    div.content {
+        margin: 10px 45px 45px 70px;
+    }
+
+    ul.tl:before {
+        margin-left: -20px;
+    }
+
+    ul.tl li.ti:before {
+        margin-left: -40px;
+    }
+
+    ul.tl li.ti div.ti-label {
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        left: -66px;
+        top: -36px;
+    }
 }
