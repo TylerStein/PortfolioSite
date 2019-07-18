@@ -19,6 +19,21 @@ h1, h2, h3, h4 {
     font-family: 'DM Sans', sans-serif;
 }
 
+div.embed-title {
+    margin: auto;
+    text-align: center;
+    font-size: 2em;
+    margin: 48px;
+}
+
+div.embed-title a {
+    text-decoration: none;
+}
+
+div.embed-title a:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
 h1 {
     font-size: 1.6em;
     line-height: 67px;
@@ -123,20 +138,31 @@ ul.tl li.ti:before {
     top: 14px;
 }
 
-ul.links {
-    list-style: none;
+div.links {
     padding: 0;
-    margin-bottom: 12px;
+    margin: 12px 0;
     font-size: 0.7em;
     line-height: 1.2em;
 }
 
-ul.credits {
-    list-style: none;
+div.links a {
+    padding-right: 1em;
+}
+
+table.credits {
     padding: 0;
     font-size: 0.7em;
     line-height: 1.2em;
     margin-bottom: 12px;
+}
+
+table.credits tr td:first-child {
+    font-weight: bold;
+    text-align: left;
+}
+
+table.credits tr td:last-child {
+    padding: 0 1em;
 }
 
 ul.tl li.ti p {
