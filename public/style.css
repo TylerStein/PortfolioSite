@@ -234,7 +234,7 @@ div.about-row {
 
 img.rounded-50 {
     object-fit: cover;
-    border-radius: 15% 35% 15% 35%;
+    border-radius: 50%;
 }
 
 img.avatar {
